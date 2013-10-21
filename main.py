@@ -1,11 +1,12 @@
-from runningstats import RunningStats
 import unittest
+from runningstats import RunningStats
+# from solution import RunningStats
 
 class TestRunningStats(unittest.TestCase):
   def test_empty_case(self):
     stats = RunningStats()
-    self.assertEqual(0, stats.average())
-    self.assertEqual(0, stats.variance())
+    self.assertEqual(None, stats.average())
+    self.assertEqual(None, stats.variance())
 
   def test_single_value(self):
     stats = RunningStats()
